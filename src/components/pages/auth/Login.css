@@ -1,0 +1,9 @@
+.show-hide{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.show-hide p{
+    margin: 0 5px;
+}
