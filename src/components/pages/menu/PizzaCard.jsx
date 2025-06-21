@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PizzaCard = ({imgUrl, username, link}) => {
+const PizzaCard = ({imgUrl, username, link, func}) => {
     const styles = {
         card: {
             border: "1px solid #ccc",
@@ -20,7 +20,7 @@ const PizzaCard = ({imgUrl, username, link}) => {
         },
     }
   return (
-    <div style={styles.card}>
+    <div style={styles.card} onClick={func}>
         <img style={styles.image}
         src={imgUrl || "https://avatars.githubusercontent.com/u/1?v=4"} 
         alt="user" />

@@ -1,9 +1,12 @@
 import React from 'react'
 import PizzaCard from './PizzaCard'
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PizzaList = () => {
+    const navigate = useNavigate();
     const[users, setUsers] = React.useState([]);
+    
 
     // fetch data from API, then set the data to the state
     const fetchData = async () => {
@@ -31,6 +34,9 @@ const PizzaList = () => {
         },
     }
 
+    const handleOpenDetails = (username) => {
+        navigate(`/menu/${username}`);
+    }
 
 
   return (
@@ -38,7 +44,8 @@ const PizzaList = () => {
         {users.map((user,) => (
             <PizzaCard imgUrl={user.avatar_url}
             username={user.login}
-            link={user.html_url}  />
+            link={user.html_url}
+            func={() => handleOpenDetails(user.login)}  />
         ))}
         
     </div>
