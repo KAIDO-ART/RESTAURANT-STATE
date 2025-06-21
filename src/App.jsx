@@ -1,17 +1,12 @@
 import React from 'react'
 import HomeView from './components/pages/home/HomeView'
 import Login  from './components/pages/auth/Login'
+import PizzaList from './components/pages/menu/PizzaList'
 
 const App = () => {
   return (
     <>
-     <div>
-      <HomeView/>
-    </div>
-
-    <div className="form-one">
-      <Login/>
-    </div>
+     <PizzaList/>
     </>
    
   )
